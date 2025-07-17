@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>গুতা মারো</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Noto Sans Bengali', sans-serif;
+      background: linear-gradient(to bottom, #e0e0e0, #f5f5f5);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 42px;
+      color: #1a1a1a;
+      margin-bottom: 40px;
+      font-weight: 600;
+      background: linear-gradient(to right, #1e3a8a, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .link {
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(135deg, #2563eb, #3b82f6);
+      padding: 14px 32px;
+      margin: 12px;
+      border-radius: 10px;
+      font-size: 20px;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+    }
+
+    .link:hover {
+      transform: translateY(-3px) scale(1.04);
+      background: linear-gradient(135deg, #1e40af, #60a5fa);
+    }
+
+    /* Corner Text Styles */
+    .corner {
+      position: absolute;
+      font-size: 18px;
+      font-weight: 700;
+      opacity: 0.9;
+      animation: fadeInSlide 1.5s ease forwards;
+    }
+
+    .top-left {
+      top: 20px;
+      left: 20px;
+      color: #d97706; /* Amber */
+    }
+
+    .top-right {
+      top: 20px;
+      right: 20px;
+      color: #10b981; /* Green */
+      text-align: right;
+    }
+
+    .bottom-left {
+      bottom: 20px;
+      left: 20px;
+      color: #3b82f6; /* Blue */
+    }
+
+    .bottom-right {
+      bottom: 20px;
+      right: 20px;
+      color: #ec4899; /* Pink */
+      text-align: right;
+    }
+
+    /* Animation */
+    @keyframes fadeInSlide {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .corner {
+        font-size: 15px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .link {
+        font-size: 18px;
+        padding: 12px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Corner Names -->
+  <div class="corner top-left">👑 Foysal Mahmud Zihak<br>CEO</div>
+  <div class="corner top-right">⚙️ MD Emon Biswas<br>COO</div>
+  <div class="corner bottom-left">💻 Abdullah Al Masud<br>CTO</div>
+  <div class="corner bottom-right">📈 Rifat Ahmed<br>CMO</div>
+
+  <h1>📁 গুতা মারো</h1>
+
+  <a class="link" href="f21fe563b408156f89ffd5da2a85c46f.pdf"> কাজীপুর</a>
+  <a class="link" href="sherpur_upozilla.pdf"> শেরপুর</a>
+  <a class="link" href="shrpur_upozilla.pdf"> ধুনোট</a>
+
+</body>
+</html>
