@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>গুতা মারো</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -13,7 +14,7 @@
 
     body {
       font-family: 'Segoe UI', 'Noto Sans Bengali', sans-serif;
-      background: linear-gradient(to bottom, #e0e0e0, #f5f5f5);
+      background: linear-gradient(to right top, #6a11cb, #2575fc);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -21,72 +22,54 @@
       justify-content: center;
       padding: 20px;
       position: relative;
+      overflow: hidden;
     }
 
     h1 {
-      font-size: 42px;
-      color: #1a1a1a;
-      margin-bottom: 40px;
-      font-weight: 600;
-      background: linear-gradient(to right, #1e3a8a, #60a5fa);
+      font-size: 48px;
+      margin-bottom: 50px;
+      font-weight: 800;
+      background: linear-gradient(to right, #00f5a0, #00d9f5);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      animation: fadeSlideDown 1.2s ease-out forwards;
     }
 
     .link {
       text-decoration: none;
-      color: white;
-      background: linear-gradient(135deg, #2563eb, #3b82f6);
-      padding: 14px 32px;
-      margin: 12px;
-      border-radius: 10px;
-      font-size: 20px;
-      transition: all 0.3s ease-in-out;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      display: inline-block;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 16px 36px;
+      margin: 14px;
+      border-radius: 12px;
+      font-size: 22px;
+      transition: all 0.4s ease-in-out;
+      box-shadow: 0 0 12px rgba(0, 255, 255, 0.15);
+      animation: fadeInUp 1s ease-in-out forwards;
     }
 
     .link:hover {
-      transform: translateY(-3px) scale(1.04);
-      background: linear-gradient(135deg, #1e40af, #60a5fa);
+      transform: scale(1.08) rotate(-1deg);
+      box-shadow: 0 0 20px #00f5a0, 0 0 30px #00d9f5;
+      background: rgba(0, 255, 255, 0.2);
     }
 
-    /* Corner Text Styles */
     .corner {
       position: absolute;
       font-size: 18px;
       font-weight: 700;
-      opacity: 0.9;
-      animation: fadeInSlide 1.5s ease forwards;
+      opacity: 0;
+      animation: fadeInSlide 2s ease forwards;
     }
 
-    .top-left {
-      top: 20px;
-      left: 20px;
-      color: #d97706; /* Amber */
-    }
+    .top-left    { top: 20px; left: 20px; color: #facc15; animation-delay: 0.2s; }
+    .top-right   { top: 20px; right: 20px; color: #34d399; text-align: right; animation-delay: 0.4s; }
+    .bottom-left { bottom: 20px; left: 20px; color: #3b82f6; animation-delay: 0.6s; }
+    .bottom-right{ bottom: 20px; right: 20px; color: #f472b6; text-align: right; animation-delay: 0.8s; }
 
-    .top-right {
-      top: 20px;
-      right: 20px;
-      color: #10b981; /* Green */
-      text-align: right;
-    }
-
-    .bottom-left {
-      bottom: 20px;
-      left: 20px;
-      color: #3b82f6; /* Blue */
-    }
-
-    .bottom-right {
-      bottom: 20px;
-      right: 20px;
-      color: #ec4899; /* Pink */
-      text-align: right;
-    }
-
-    /* Animation */
+    /* Animations */
     @keyframes fadeInSlide {
       0% {
         opacity: 0;
@@ -98,9 +81,31 @@
       }
     }
 
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeSlideDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     @media (max-width: 600px) {
       .corner {
-        font-size: 15px;
+        font-size: 14px;
       }
 
       h1 {
@@ -124,9 +129,9 @@
 
   <h1>📁 গুতা মারো</h1>
 
-  <a class="link" href="f21fe563b408156f89ffd5da2a85c46f.pdf"> কাজীপুর</a>
-  <a class="link" href="sherpur_upozilla.pdf"> শেরপুর</a>
-  <a class="link" href="Dunat.pdf"> ধুনোট</a>
+  <a class="link" href="f21fe563b408156f89ffd5da2a85c46f.pdf" target="_blank"> কাজীপুর</a>
+  <a class="link" href="sherpur_upozilla.pdf" target="_blank"> শেরপুর</a>
+  <a class="link" href="Dunat.pdf" target="_blank"> ধুনোট</a>
 
 </body>
 </html>
